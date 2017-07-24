@@ -1,0 +1,57 @@
+{
+  "name": "提取视频",
+  "version": "0.1",
+  "minimum_chrome_version": "10.0",
+  "description": "视频提取下载",
+  "icons": {
+    "48": "video_48.png",
+    "192": "video_192.png"
+  },
+  "browser_action": {
+    "default_icon": "video_48.png"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "content.js"
+      ],
+      "matches": [
+        "http://*.toutiao.com/*",
+        "*://www.weibo.com/*",
+        "*://*.sinaimg.cn/*",
+        "*://*.miaopai.com/*",
+        "*://weibo.com/*",
+        "*://weibo.cn/*",
+        "*://*.dwstatic.com/*",
+        "*://www.365yg.com/*",
+        "*://mp.weixin.qq.com/*",
+        "*://v.qq.com/*"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "webRequest",
+    "http://*.toutiao.com/*",
+    "*://*.weibo.com/*",
+    "*://*.sinaimg.cn/*",
+    "*://*.miaopai.com/*",
+    "*://weibo.com/*",
+    "*://weibo.cn/*",
+    "*://www.365yg.com/*",
+    "http://*.dwstatic.com/*",
+    "http://*.huya.com/*",
+    "*://mp.weixin.qq.com/*",
+    "*://v.qq.com/*"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "web_accessible_resources": [
+    "weibo.js"
+  ],
+  "manifest_version": 1
+}
