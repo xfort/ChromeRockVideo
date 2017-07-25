@@ -24,8 +24,9 @@ function onStart() {
 
 onStart();
 
-
 //提取微博视频
 function parseWeiboVideo() {
-
+    var scriptNode = document.createElement("script");
+    scriptNode.src = chrome.extension.getURL("weibo.js");
+    document.getElementsByTagName("body")[0].appendChild(scriptNode);
 }
