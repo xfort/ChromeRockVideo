@@ -16,13 +16,15 @@
         "content.js"
       ],
       "matches": [
-        "*://weibo.com/tv/v/*"
+        "*://weibo.com/tv/v/*",
+        "*://www.365yg.com/*"
       ],
       "run_at": "document_idle"
     }
   ],
   "permissions": [
-    "*://weibo.com/tv/v/*"
+    "*://weibo.com/tv/v/*",
+    "*://www.365yg.com/*"
   ],
   "background": {
     "scripts": [
@@ -30,7 +32,8 @@
     ]
   },
   "web_accessible_resources": [
-    "weibo.js"
+    "weibo.js",
+    "toutiao.js"
   ],
   "manifest_version": 2
 }
